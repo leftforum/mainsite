@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'ledBoard';
+	src: 
+	local('ledboard'),
+	url('/sites/all/libraries/fonts/ledboard.ttf')
+	format('truetype');
+	/*Copyright 2000 Paul Hustava - phustava@inlink.com*/
+}
+
+#resisThemes {
+	margin: auto;
+	width: 666px;
+	min-height: 604px;
+	padding-top: 25px;
+	text-align: center;
+	background: url('/sites/default/files/images/protest_capitol.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.resisText, #resis {
+	font-family: 'ledBoard';
+	font-size: xx-large;
+	background: #ff00f0;
+	color: #000;
+}

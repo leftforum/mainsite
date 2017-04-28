@@ -3986,7 +3986,11 @@ function drupal_html_id($id) {
   // be merged with content already on the base page. The HTML IDs must be
   // unique for the fully merged content. Therefore, initialize $seen_ids to
   // take into account IDs that are already in use on the base page.
-  $seen_ids_init = &drupal_static(__FUNCTION__ . ':init');
+  static $drupal_static_fast;
+  if (!isset($drupal_static_fast['seen_ids_init'])) {
+    $drupal_static_fast['seen_ids_init'] = &drupal_static(__FUNCTION__ . ':init');
+  }
+  $seen_ids_init = &$drupal_static_fast['seen_ids_init'];
   if (!isset($seen_ids_init)) {
     // Ideally, Drupal would provide an API to persist state information about
     // prior page requests in the database, and we'd be able to add this
@@ -4031,7 +4035,10 @@ function drupal_html_id($id) {
       }
     }
   }
-  $seen_ids = &drupal_static(__FUNCTION__, $seen_ids_init);
+  if (!isset($drupal_static_fast['seen_ids'])) {
+    $drupal_static_fast['seen_ids'] = &drupal_static(__FUNCTION__, $seen_ids_init);
+  }
+  $seen_ids = &$drupal_static_fast['seen_ids'];
 
   $id = strtr(drupal_strtolower($id), array(' ' => '-', '_' => '-', '[' => '-', ']' => ''));
 
@@ -4475,7 +4482,6 @@ function drupal_get_js($scope = 'header', $javascript = NULL, $skip_alter = FALS
     switch ($item['type']) {
       case 'setting':
         $js_element = $element;
-        $js_element['#attributes'] = !empty($item['attributes']) ? $item['attributes'] : array();
         $js_element['#value_prefix'] = $embed_prefix;
         $js_element['#value'] = 'jQuery.extend(Drupal.settings, ' . drupal_json_encode(drupal_array_merge_deep_array($item['data'])) . ");";
         $js_element['#value_suffix'] = $embed_suffix;
@@ -4484,7 +4490,6 @@ function drupal_get_js($scope = 'header', $javascript = NULL, $skip_alter = FALS
 
       case 'inline':
         $js_element = $element;
-        $js_element['#attributes'] = !empty($item['attributes']) ? $item['attributes'] : array();
         if ($item['defer']) {
           $js_element['#attributes']['defer'] = 'defer';
         }
@@ -4496,7 +4501,6 @@ function drupal_get_js($scope = 'header', $javascript = NULL, $skip_alter = FALS
 
       case 'file':
         $js_element = $element;
-        $js_element['#attributes'] = !empty($item['attributes']) ? $item['attributes'] : array();
         if (!$item['preprocess'] || !$preprocess_js) {
           if ($item['defer']) {
             $js_element['#attributes']['defer'] = 'defer';

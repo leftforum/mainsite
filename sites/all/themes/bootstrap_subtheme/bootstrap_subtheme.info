@@ -32,10 +32,14 @@ stylesheets[all][] = css/custom.css
 
 stylesheets[all][] = maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
 
+stylesheets[all][] = css/led.css
+
 ; ;;;;;;;;;;;;;;;;;;;;;
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = 'jquery.smartmenus.js'
 scripts[] = 'addons/bootstrap/jquery.smartmenus.bootstrap.js'
+scripts[] = js/tickerscrambler.js
+scripts[] = js/resisthemes.js
 ; scripts[] = 'bootstrap/js/custom.js'

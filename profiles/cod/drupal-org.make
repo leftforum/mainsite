@@ -54,7 +54,7 @@ projects[auto_nodetitle][version] = "1.0"
 
 projects[better_exposed_filters][type] = "module"
 projects[better_exposed_filters][subdir] = "contrib"
-projects[better_exposed_filters][version] = "3.2"
+projects[better_exposed_filters][version] = "3.4"
 
 projects[breakpoints][type] = "module"
 projects[breakpoints][subdir] = "contrib"
@@ -72,9 +72,10 @@ projects[ckeditor][version] = "1.17"
 projects[cod_support][type] = "module"
 projects[cod_support][subdir] = "contrib"
 projects[cod_support][version] = "2.0-beta4"
-;projects[cod_support][download][type] = "git"
-;projects[cod_support][download][url] = "http://git.drupal.org/project/cod_support.git"
-;projects[cod_support][download][branch] = "7.x-2.x"
+projects[cod_support][download][type] = "git"
+projects[cod_support][download][url] = "http://git.drupal.org/project/cod_support.git"
+projects[cod_support][download][branch] = "7.x-2.x"
+projects[cod_support][download][revision] = "829c9a484346abf92b7d6d3510e3c253f7ecc9e1"
 
 projects[commerce][type] = "module"
 projects[commerce][subdir] = "contrib"
@@ -174,7 +175,7 @@ projects[conditional_fields][download][revision] = "12ab0cb0e0660278b2a9e330aae2
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.11"
+projects[ctools][version] = "1.12"
 
 ; Allow contexts to load in information for existing contexts.
 ; See https://drupal.org/node/2484541#comment-9899043 for more info.
@@ -202,7 +203,7 @@ projects[devel][subdir] = "contrib"
 
 projects[diff][type] = "module"
 projects[diff][subdir] = "contrib"
-projects[diff][version] = "3.2"
+projects[diff][version] = "3.3"
 
 ; Distro Update
 projects[distro_update][version] = "1.x-dev"
@@ -214,14 +215,13 @@ projects[distro_update][download][branch] = "7.x-1.x"
 
 projects[eck][type] = "module"
 projects[eck][subdir] = "contrib"
-projects[eck][version] = "2.0-rc8"
+projects[eck][version] = "2.0-rc9"
 
 projects[efq_extra_field][type] = "module"
 projects[efq_extra_field][subdir] = "contrib"
 projects[efq_extra_field][version] = "1.0-alpha1"
 
 projects[entity][type] = "module"
-projects[entity][subdir] = "contrib"
 projects[entity][download][type] = "git"
 projects[entity][download][url] = "http://git.drupal.org/project/entity.git"
 projects[entity][download][branch] = "7.x-1.x"
@@ -287,11 +287,15 @@ projects[field_select_ct][version] = "1.0"
 
 projects[field_collection][type] = "module"
 projects[field_collection][subdir] = "contrib"
-projects[field_collection][version] = "1.0-beta11"
+projects[field_collection][version] = "1.0-beta12"
+projects[field_collection][download][type] = "git"
+projects[field_collection][download][url] = "http://git.drupal.org/project/field_collection.git"
+projects[field_collection][download][branch] = "7.x-1.x"
+projects[field_collection][download][revision] = "280de245ccf15f297c7dbaa909407372d4a6f1ee"
 
 ; Fix undefined index from field_collection_field_attach_form().
 ; See https://drupal.org/node/1716526 for more info.
-projects[field_collection][patch][] = "https://drupal.org/files/issues/undefined_langcode-1716526-12.patch"
+projects[field_collection][patch][] = "https://drupal.org/files/issues/undefined_langcode-1716526-15.patch"
 
 projects[file_entity][type] = "module"
 projects[file_entity][subdir] = "contrib"
@@ -320,7 +324,7 @@ projects[interval][version] = "1.0"
 projects[interval][subdir] = "contrib"
 
 projects[i18n][type] = "module"
-projects[i18n][version] = "1.14"
+projects[i18n][version] = "1.15"
 projects[i18n][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.7"
@@ -360,7 +364,7 @@ projects[multiple_entity_form][subdir] = "contrib"
 
 projects[oauth][type] = "module"
 projects[oauth][subdir] = "contrib"
-projects[oauth][version] = "3.2"
+projects[oauth][version] = "3.4"
 
 projects[oauthconnector][type] = "module"
 projects[oauthconnector][subdir] = "contrib"
@@ -444,7 +448,7 @@ projects[panelizer][patch][2457113] = "https://drupal.org/files/issues/panelizer
 
 projects[panels][type] = "module"
 projects[panels][subdir] = "contrib"
-projects[panels][version] = "3.8"
+projects[panels][version] = "3.9"
 
 ; Fix IPE JS alert (Panelizer is Incompatible with Moderation)
 ; https://drupal.org/node/1402860#comment-9729091
@@ -488,7 +492,7 @@ projects[safeword][version] = "1.13"
 
 projects[smtp][type] = "module"
 projects[smtp][subdir] = "contrib"
-projects[smtp][version] = "1.4"
+projects[smtp][version] = "1.6"
 
 projects[subpathauto][type] = "module"
 projects[subpathauto][subdir] = "contrib"
@@ -511,14 +515,14 @@ projects[ticket][subdir] = "contrib"
 projects[ticket][download][type] = "git"
 projects[ticket][download][url] = "http://git.drupal.org/project/ticket.git"
 projects[ticket][download][branch] = "7.x-1.x"
-;projects[ticket][download][revision] = "9f94b5fb06c98a8547b0666f97c381992a4abdbc"
+projects[ticket][download][revision] = "7389b79d76e48eeff36603887a35597081bbc879"
 
 projects[title][type] = "module"
-projects[title][version] = "1.0-alpha8"
+projects[title][version] = "1.0-alpha9"
 projects[title][subdir] = "contrib"
 
 projects[token][type] = "module"
-projects[token][version] = "1.6"
+projects[token][version] = "1.7"
 projects[token][subdir] = "contrib"
 
 projects[uuid][type] = "module"

@@ -141,3 +141,6 @@
 .payments {
 	font-size: 1.5em;	
 }
+fieldset .label {
+	color: #000;
+}

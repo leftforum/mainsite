@@ -848,6 +848,7 @@ function install_verify_completed_task() {
  */
 function install_verify_settings() {
   global $databases;
+
   // Verify existing settings (if any).
   if (!empty($databases) && install_verify_pdo()) {
     $database = $databases['default']['default'];

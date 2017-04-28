@@ -79,7 +79,7 @@ function theme_bootstrap_login_modal_output($vars) {
   $register_modal = '';
   if (variable_get('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)) {
     $register_form = drupal_get_form('user_register_form');
-    $links .= '<li><a href="#" data-toggle="modal" data-target="#register-modal">' . t('Create an account') . '</a></li>';
+    $links .= '<li><a href="#" data-toggle="modal" data-target="#register-modal">' . t('Register') . '</a></li>';
     $register_modal = '
       <div class="modal fade" id="register-modal" role="dialog" aria-labelledby="modalRegisterLabel" aria-hidden="true">
         <div class="modal-dialog">

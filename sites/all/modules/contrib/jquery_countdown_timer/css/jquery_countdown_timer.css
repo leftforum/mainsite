@@ -1,5 +1,5 @@
 .countdownHolder{
-	width:355px;
+	width:450px;
 	margin:0 auto;
 	font: 28px/1.5 'Open Sans Condensed',sans-serif;
 	text-align:center;
@@ -83,13 +83,11 @@
 }
 
 #jquery-countdown-timer-note{
-	visibility: hidden;
-	position: absolute;
-  /*color: #666666;
+  color: #666666;
   font-size: 12px;
   margin: 0 auto;
   padding: 4px;
   text-align: center;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-  width: 400px;*/
+  width: 400px;
 }
